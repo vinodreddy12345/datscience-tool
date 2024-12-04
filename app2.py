@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
-
+#im King of coding
 # Function to upload CSV file and display summary statistics
 @st.cache_data  # Cache the loaded data
 def load_data(uploaded_file):
@@ -34,6 +34,7 @@ def upload_and_analyze_csv():
                 st.dataframe(df.sample(n=100) if len(df) > 100 else df)
 
                 # Check for numeric columns to plot histograms
+                #
                 numeric_cols = df.select_dtypes(include=['number']).columns.tolist()
                 if numeric_cols:
                     for col in numeric_cols:
